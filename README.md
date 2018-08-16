@@ -46,10 +46,11 @@ override func viewDidLoad() {
 
 @objc func selectDate(_ btn:UIButton) {
     ZZDatePicker.show(self, mode: mode) { [weak self] (date) in
-    self?.mode.date = date
-    let fmt = DateFormatter()
-    fmt.dateFormat = "yyyy-MM-dd"
-    btn.setTitle(fmt.string(from: date), for: .normal)
+        self?.mode.date = date
+        let fmt = DateFormatter()
+        fmt.dateFormat = "yyyy-MM-dd"
+        btn.setTitle(fmt.string(from: date), for: .normal)
+    ｝
 }
 ```
 
