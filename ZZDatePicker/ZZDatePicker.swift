@@ -7,26 +7,27 @@
 //
 
 import UIKit
+import Foundation
 
-class ZZDatePicker: UIViewController {
-    
-    struct ZZDatePickerMode {
-        var date:Date = Date()
-        var maximumDate:Date?
-        var minimumDate:Date?
-        var backgroundColor:UIColor?
-        var datePickerMode:UIDatePickerMode = .date
-        
-        static var `default`:ZZDatePickerMode { get { return ZZDatePickerMode(date: Date(),
-                                                                       maximumDate: Date(),
-                                                                       minimumDate: nil,
-                                                                       backgroundColor: UIColor.white,
-                                                                       datePickerMode: .date) } }
-    }
+
+open class ZZDatePicker: UIViewController {
     
     // MARK: - Public Properties
     
-    
+    public struct ZZDatePickerMode {
+        
+        public var date:Date = Date()
+        public var maximumDate:Date?
+        public var minimumDate:Date?
+        public var backgroundColor:UIColor?
+        public var datePickerMode:UIDatePickerMode = .date
+        
+        public static var `default`:ZZDatePickerMode { get { return ZZDatePickerMode(date: Date(),
+                                                                                     maximumDate: Date(),
+                                                                                     minimumDate: nil,
+                                                                                     backgroundColor: UIColor.white,
+                                                                                     datePickerMode: .date) } }
+    }
     
     // MARK: - Private Properties
     
@@ -42,12 +43,12 @@ class ZZDatePicker: UIViewController {
     
     // MARK: - Setup UI
     
-    override func viewDidAppear(_ animated: Bool) {
+    override open func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         show_animate()
     }
 
-    override func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         
         // Self
@@ -87,7 +88,7 @@ class ZZDatePicker: UIViewController {
     
     // MARK: - Methods
     
-    public class func show(_ inViewController:UIViewController, mode:ZZDatePickerMode = .default, pickDone:@escaping (Date)->Void) {
+    open class func show(_ inViewController:UIViewController, mode:ZZDatePickerMode = .default, pickDone:@escaping (Date)->Void) {
         let vc = ZZDatePicker()
         vc.pickDone = pickDone
         vc.mode = mode
@@ -114,7 +115,7 @@ class ZZDatePicker: UIViewController {
         }
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         dissmiss()
     }
     
@@ -133,10 +134,4 @@ class ZZDatePicker: UIViewController {
         self.pickDone?(date)
         dissmiss()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 }
