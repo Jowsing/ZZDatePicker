@@ -9,7 +9,7 @@ A date picker of Swift.<br>
 
 Screencast from our Demo
 
-<a href="./gifs/screen0.gif">< img src="./gifs/screen0.gif" width="40%"/></a >
+<img src="https://github.com/Jowthing/ZZDatePicker/blob/master/gifs/screen0.gif" width="40%"/>
 
 ## Requirements
 
@@ -28,29 +28,28 @@ pod 'ZZDatePicker'
 
 ## Usage
 
-```
+``` Swift
 var mode = ZZDatePicker.ZZDatePickerMode.default
 
 override func viewDidLoad() {
-super.viewDidLoad()
+    super.viewDidLoad()
 
-// Date
-let btn = UIButton(frame: CGRect(x: 30, y: 100, width: view.bounds.size.width-60, height: 50))
-btn.setTitle("请选择日期", for: .normal)
-btn.setTitleColor(UIColor.white, for: .normal)
-btn.backgroundColor = UIColor.red
-view.addSubview(btn)
+    // Date
+    let btn = UIButton(frame: CGRect(x: 30, y: 100, width: view.bounds.size.width-60, height: 50))
+    btn.setTitle("请选择日期", for: .normal)
+    btn.setTitleColor(UIColor.white, for: .normal)
+    btn.backgroundColor = UIColor.red
+    view.addSubview(btn)
 
-btn.addTarget(self, action: #selector(ViewController.selectDate(_:)), for: .touchDown)
+    btn.addTarget(self, action: #selector(ViewController.selectDate(_:)), for: .touchDown)
 }
 
 @objc func selectDate(_ btn:UIButton) {
-ZZDatePicker.show(self, mode: mode) { [weak self] (date) in
-self?.mode.date = date
-let fmt = DateFormatter()
-fmt.dateFormat = "yyyy-MM-dd"
-btn.setTitle(fmt.string(from: date), for: .normal)
-}
+    ZZDatePicker.show(self, mode: mode) { [weak self] (date) in
+    self?.mode.date = date
+    let fmt = DateFormatter()
+    fmt.dateFormat = "yyyy-MM-dd"
+    btn.setTitle(fmt.string(from: date), for: .normal)
 }
 ```
 
