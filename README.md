@@ -29,6 +29,8 @@ pod 'ZZDatePicker'
 ## Usage
 
 ``` Swift
+import ZZDatePicker
+
 var mode = ZZDatePicker.ZZDatePickerMode.default
 
 override func viewDidLoad() {
