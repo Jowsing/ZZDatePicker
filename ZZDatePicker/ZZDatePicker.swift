@@ -9,129 +9,61 @@
 import UIKit
 import Foundation
 
+public struct ZZDatePicker {
+    
+    // MARK: - Properties (public)
+    
+    public var mode: UIDatePicker.Mode = .date
+    
+    public var currentDate = Date()
+    
+    public var maximumDate: Date?
+    
+    public var minimumDate: Date?
+    
+    public var pickerHeight: CGFloat = 345.0
+    
+    public var lineColor: UIColor = Colors.lineColor
+    
+    public var toolBarTintColor: UIColor = Colors.toolBarTintColor
+    
+    public var dimissBackgroundColor: UIColor = Colors.dimissBackgroundColor
+    
+    public var pickerBackgroundColor: UIColor = Colors.pickerBackgroundColor
+    
+    
+    // MARK: - Properties (internal)
+    
+    internal let pickHandler: PickHandler?
+    
+    
+    // MARK: - Life Cycles
+    
+    public init(pickHandler: PickHandler?) {
+        self.pickHandler = pickHandler
+    }
+    
+    public func pickerViewController() -> UIViewController {
+        return ZZDatePickerController(picker: self)
+    }
+}
 
-open class ZZDatePicker: UIViewController {
+public extension ZZDatePicker {
     
-    // MARK: - Public Properties
-    
-    public struct ZZDatePickerMode {
-        
-        public var date:Date = Date()
-        public var maximumDate:Date?
-        public var minimumDate:Date?
-        public var backgroundColor:UIColor?
-        public var datePickerMode:UIDatePickerMode = .date
-        
-        public static var `default`:ZZDatePickerMode { get { return ZZDatePickerMode(date: Date(),
-                                                                                     maximumDate: Date(),
-                                                                                     minimumDate: nil,
-                                                                                     backgroundColor: UIColor.white,
-                                                                                     datePickerMode: .date) } }
+    func show(in viewController: UIViewController) {
+        viewController.definesPresentationContext = true
+        viewController.present(pickerViewController(), animated: false, completion: nil)
     }
-    
-    // MARK: - Private Properties
-    
-    private var date:Date!
-    private var mode:ZZDatePickerMode!
-    
-    private var pickDone:((Date)->Void)?
-    
-    // MARK: - Lazy Properties
-    
-    private lazy var box:UIView = { return UIView() }()
-    
-    
-    // MARK: - Setup UI
-    
-    override open func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        show_animate()
-    }
+}
 
-    override open func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Self
-        
-        
-        // Box
-        self.box.frame = CGRect(x: 0, y: view.bounds.size.height, width: view.bounds.size.width, height: 260)
-        view.addSubview(self.box)
-        
-        // Topline
-        let line = UIView.init(frame: CGRect(x: 0, y: 0, width: box.bounds.size.width, height: 1/UIScreen.main.scale))
-        line.backgroundColor = UIColor.black
-        box.addSubview(line)
-        
-        // ToolBar
-        let toolBar = UIToolbar.init(frame: CGRect(x: 0, y: line.frame.maxY, width: box.bounds.size.width, height: 40))
-        toolBar.barStyle = .default
-        toolBar.items = [
-            UIBarButtonItem.init(barButtonSystemItem: .cancel, target: self, action: #selector(ZZDatePicker.clickcancel)),
-            UIBarButtonItem.init(barButtonSystemItem: .flexibleSpace, target: nil, action: nil),
-            UIBarButtonItem.init(barButtonSystemItem: .done, target: self, action: #selector(ZZDatePicker.clickdone))
-        ]
-        box.addSubview(toolBar)
-        
-        // Picker
-        let datePicker = UIDatePicker.init()
-        datePicker.frame = CGRect(x: 0, y: toolBar.frame.maxY, width: box.bounds.size.width, height: box.bounds.size.height-toolBar.bounds.size.height)
-        datePicker.date = date
-        datePicker.maximumDate = mode.maximumDate
-        datePicker.minimumDate = mode.minimumDate
-        datePicker.backgroundColor = mode.backgroundColor
-        datePicker.datePickerMode = mode.datePickerMode
-        box.addSubview(datePicker)
-        datePicker.addTarget(self, action: #selector(ZZDatePicker.dateChanged(_:)), for: .valueChanged)
-        
-    }
+public extension ZZDatePicker {
     
-    // MARK: - Methods
+    typealias PickHandler = (Date) -> Void
     
-    open class func show(_ inViewController:UIViewController, mode:ZZDatePickerMode = .default, pickDone:@escaping (Date)->Void) {
-        let vc = ZZDatePicker()
-        vc.pickDone = pickDone
-        vc.mode = mode
-        vc.date = mode.date
-        vc.view.backgroundColor = UIColor.init(white: 0, alpha: 0.3)
-        vc.modalPresentationStyle = .overCurrentContext
-        inViewController.definesPresentationContext = true
-        inViewController.present(vc, animated: false, completion: nil)
-    }
-    
-    private func show_animate() {
-        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.75, initialSpringVelocity: 0.2, options: .curveLinear, animations: {
-            self.box.frame.origin.y = self.view.bounds.size.height - self.box.bounds.size.height
-        }) { (_) in
-            
-        }
-    }
-    
-    private func dissmiss() {
-        UIView.animate(withDuration: 0.25, animations: {
-            self.box.frame.origin.y = self.view.bounds.size.height
-        }) { (_) in
-            self.dismiss(animated: false, completion: nil)
-        }
-    }
-    
-    override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        dissmiss()
-    }
-    
-    @objc
-    func dateChanged(_ picker:UIDatePicker) {
-        self.date = picker.date
-    }
-    
-    @objc
-    func clickcancel() {
-        dissmiss()
-    }
-    
-    @objc
-    func clickdone() {
-        self.pickDone?(date)
-        dissmiss()
+    struct Colors {
+        static var lineColor: UIColor { return UIColor.gray }
+        static var toolBarTintColor: UIColor { return UIColor(white: 0.92, alpha: 1) }
+        static var dimissBackgroundColor: UIColor { return UIColor(white: 0, alpha: 0.3) }
+        static var pickerBackgroundColor: UIColor { return UIColor(red: 214.0 / 255.0, green: 216.0 / 255.0, blue: 221.0 / 255.0, alpha: 1.0) }
     }
 }

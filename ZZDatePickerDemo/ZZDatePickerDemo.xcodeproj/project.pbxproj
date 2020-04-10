@@ -7,34 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82FB5796243F08F600F6644C /* ZZDatePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FB5795243F08F600F6644C /* ZZDatePickerController.swift */; };
 		E945677C212482A00020DF32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E945677B212482A00020DF32 /* AppDelegate.swift */; };
 		E945677E212482A00020DF32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E945677D212482A00020DF32 /* ViewController.swift */; };
 		E9456781212482A00020DF32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E945677F212482A00020DF32 /* Main.storyboard */; };
 		E9456783212482A20020DF32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9456782212482A20020DF32 /* Assets.xcassets */; };
 		E9456786212482A20020DF32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9456784212482A20020DF32 /* LaunchScreen.storyboard */; };
-		E9456791212482A20020DF32 /* ZZDatePickerDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9456790212482A20020DF32 /* ZZDatePickerDemoTests.swift */; };
-		E945679C212482A20020DF32 /* ZZDatePickerDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E945679B212482A20020DF32 /* ZZDatePickerDemoUITests.swift */; };
 		E94567AB2124833F0020DF32 /* ZZDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94567AA2124833F0020DF32 /* ZZDatePicker.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		E945678D212482A20020DF32 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E9456770212482A00020DF32 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E9456777212482A00020DF32;
-			remoteInfo = ZZDatePickerDemo;
-		};
-		E9456798212482A20020DF32 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E9456770212482A00020DF32 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E9456777212482A00020DF32;
-			remoteInfo = ZZDatePickerDemo;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		82FB5795243F08F600F6644C /* ZZDatePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZZDatePickerController.swift; sourceTree = "<group>"; };
 		E9456778212482A00020DF32 /* ZZDatePickerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZZDatePickerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E945677B212482A00020DF32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E945677D212482A00020DF32 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,10 +25,8 @@
 		E9456782212482A20020DF32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9456785212482A20020DF32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9456787212482A20020DF32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E945678C212482A20020DF32 /* ZZDatePickerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZZDatePickerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9456790212482A20020DF32 /* ZZDatePickerDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZZDatePickerDemoTests.swift; sourceTree = "<group>"; };
 		E9456792212482A20020DF32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E9456797212482A20020DF32 /* ZZDatePickerDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZZDatePickerDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E945679B212482A20020DF32 /* ZZDatePickerDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZZDatePickerDemoUITests.swift; sourceTree = "<group>"; };
 		E945679D212482A30020DF32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E94567AA2124833F0020DF32 /* ZZDatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZZDatePicker.swift; sourceTree = "<group>"; };
@@ -53,20 +34,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		E9456775212482A00020DF32 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E9456789212482A20020DF32 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E9456794212482A20020DF32 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -90,8 +57,6 @@
 			isa = PBXGroup;
 			children = (
 				E9456778212482A00020DF32 /* ZZDatePickerDemo.app */,
-				E945678C212482A20020DF32 /* ZZDatePickerDemoTests.xctest */,
-				E9456797212482A20020DF32 /* ZZDatePickerDemoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				E94567AA2124833F0020DF32 /* ZZDatePicker.swift */,
+				82FB5795243F08F600F6644C /* ZZDatePickerController.swift */,
 			);
 			name = ZZDatePicker;
 			path = ../../ZZDatePicker;
@@ -157,42 +123,6 @@
 			productReference = E9456778212482A00020DF32 /* ZZDatePickerDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E945678B212482A20020DF32 /* ZZDatePickerDemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E94567A3212482A30020DF32 /* Build configuration list for PBXNativeTarget "ZZDatePickerDemoTests" */;
-			buildPhases = (
-				E9456788212482A20020DF32 /* Sources */,
-				E9456789212482A20020DF32 /* Frameworks */,
-				E945678A212482A20020DF32 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E945678E212482A20020DF32 /* PBXTargetDependency */,
-			);
-			name = ZZDatePickerDemoTests;
-			productName = ZZDatePickerDemoTests;
-			productReference = E945678C212482A20020DF32 /* ZZDatePickerDemoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		E9456796212482A20020DF32 /* ZZDatePickerDemoUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E94567A6212482A30020DF32 /* Build configuration list for PBXNativeTarget "ZZDatePickerDemoUITests" */;
-			buildPhases = (
-				E9456793212482A20020DF32 /* Sources */,
-				E9456794212482A20020DF32 /* Frameworks */,
-				E9456795212482A20020DF32 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E9456799212482A20020DF32 /* PBXTargetDependency */,
-			);
-			name = ZZDatePickerDemoUITests;
-			productName = ZZDatePickerDemoUITests;
-			productReference = E9456797212482A20020DF32 /* ZZDatePickerDemoUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -205,14 +135,6 @@
 				TargetAttributes = {
 					E9456777212482A00020DF32 = {
 						CreatedOnToolsVersion = 9.4.1;
-					};
-					E945678B212482A20020DF32 = {
-						CreatedOnToolsVersion = 9.4.1;
-						TestTargetID = E9456777212482A00020DF32;
-					};
-					E9456796212482A20020DF32 = {
-						CreatedOnToolsVersion = 9.4.1;
-						TestTargetID = E9456777212482A00020DF32;
 					};
 				};
 			};
@@ -230,8 +152,6 @@
 			projectRoot = "";
 			targets = (
 				E9456777212482A00020DF32 /* ZZDatePickerDemo */,
-				E945678B212482A20020DF32 /* ZZDatePickerDemoTests */,
-				E9456796212482A20020DF32 /* ZZDatePickerDemoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -247,20 +167,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E945678A212482A20020DF32 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E9456795212482A20020DF32 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -271,39 +177,11 @@
 				E945677E212482A00020DF32 /* ViewController.swift in Sources */,
 				E94567AB2124833F0020DF32 /* ZZDatePicker.swift in Sources */,
 				E945677C212482A00020DF32 /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E9456788212482A20020DF32 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E9456791212482A20020DF32 /* ZZDatePickerDemoTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E9456793212482A20020DF32 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E945679C212482A20020DF32 /* ZZDatePickerDemoUITests.swift in Sources */,
+				82FB5796243F08F600F6644C /* ZZDatePickerController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		E945678E212482A20020DF32 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E9456777212482A00020DF32 /* ZZDatePickerDemo */;
-			targetProxy = E945678D212482A20020DF32 /* PBXContainerItemProxy */;
-		};
-		E9456799212482A20020DF32 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E9456777212482A00020DF32 /* ZZDatePickerDemo */;
-			targetProxy = E9456798212482A20020DF32 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E945677F212482A00020DF32 /* Main.storyboard */ = {
@@ -376,7 +254,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -430,7 +308,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -445,13 +323,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ZZDatePickerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.ls.ZZDatePickerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -462,92 +341,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ZZDatePickerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.ls.ZZDatePickerDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		E94567A4212482A30020DF32 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ZZDatePickerDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = cn.ls.ZZDatePickerDemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZZDatePickerDemo.app/ZZDatePickerDemo";
-			};
-			name = Debug;
-		};
-		E94567A5212482A30020DF32 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ZZDatePickerDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = cn.ls.ZZDatePickerDemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZZDatePickerDemo.app/ZZDatePickerDemo";
-			};
-			name = Release;
-		};
-		E94567A7212482A30020DF32 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ZZDatePickerDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = cn.ls.ZZDatePickerDemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ZZDatePickerDemo;
-			};
-			name = Debug;
-		};
-		E94567A8212482A30020DF32 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ZZDatePickerDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = cn.ls.ZZDatePickerDemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ZZDatePickerDemo;
 			};
 			name = Release;
 		};
@@ -568,24 +370,6 @@
 			buildConfigurations = (
 				E94567A1212482A30020DF32 /* Debug */,
 				E94567A2212482A30020DF32 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E94567A3212482A30020DF32 /* Build configuration list for PBXNativeTarget "ZZDatePickerDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E94567A4212482A30020DF32 /* Debug */,
-				E94567A5212482A30020DF32 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E94567A6212482A30020DF32 /* Build configuration list for PBXNativeTarget "ZZDatePickerDemoUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E94567A7212482A30020DF32 /* Debug */,
-				E94567A8212482A30020DF32 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

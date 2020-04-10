@@ -10,13 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var mode = ZZDatePicker.ZZDatePickerMode.default
+    private lazy var btn = { UIButton() }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Date
-        let btn = UIButton(frame: CGRect(x: 30, y: 100, width: view.bounds.size.width-60, height: 50))
+        btn.frame = CGRect(x: 30, y: 100, width: view.bounds.size.width-60, height: 50)
         btn.setTitle("请选择日期", for: .normal)
         btn.setTitleColor(UIColor.white, for: .normal)
         btn.backgroundColor = UIColor.red
@@ -26,12 +26,12 @@ class ViewController: UIViewController {
     }
     
     @objc func selectDate(_ btn:UIButton) {
-        ZZDatePicker.show(self, mode: mode) { [weak self] (date) in
-            self?.mode.date = date
+        let picker = ZZDatePicker { [unowned self] (date) in
             let fmt = DateFormatter()
             fmt.dateFormat = "yyyy-MM-dd"
-            btn.setTitle(fmt.string(from: date), for: .normal)
+            self.btn.setTitle(fmt.string(from: date), for: .normal)
         }
+        present(picker.pickerViewController(), animated: false, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
