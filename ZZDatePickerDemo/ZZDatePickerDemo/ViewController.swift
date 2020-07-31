@@ -26,11 +26,13 @@ class ViewController: UIViewController {
     }
     
     @objc func selectDate(_ btn:UIButton) {
-        let picker = ZZDatePicker { [unowned self] (date) in
+        var picker = ZZDatePicker { [unowned self] (date) in
             let fmt = DateFormatter()
-            fmt.dateFormat = "yyyy-MM-dd"
+            fmt.dateFormat = "yyyy-MM"
             self.btn.setTitle(fmt.string(from: date), for: .normal)
         }
+        picker.mode = .monthAndYear
+        picker.maximumDate = Date()
         present(picker.pickerViewController(), animated: false, completion: nil)
     }
 

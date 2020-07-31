@@ -19,7 +19,25 @@ internal class ZZDatePickerController: UIViewController {
 
     private lazy var containerView = { UIView() }()
     private lazy var toolBar = { UIToolbar() }()
-    private lazy var datePicker = { UIDatePicker() }()
+    private lazy var datePicker: UIView = {
+        switch picker.mode {
+        case .monthAndYear:
+            let pickerView = ZZDatePickerView()
+            pickerView.date = picker.currentDate
+            pickerView.maximumDate = picker.maximumDate
+            pickerView.minimumDate = picker.minimumDate
+            pickerView.locale = picker.locale
+            return pickerView
+        default:
+            let pickerView = UIDatePicker()
+            pickerView.date = picker.currentDate
+            pickerView.maximumDate = picker.maximumDate
+            pickerView.minimumDate = picker.minimumDate
+            pickerView.datePickerMode = picker.mode.mode_UIDatePicker()
+            pickerView.locale = picker.locale
+            return pickerView
+        }
+    }()
 
 
     // MARK: - Life Cycles
@@ -67,10 +85,6 @@ internal class ZZDatePickerController: UIViewController {
             /// Date Picker
             datePicker.frame = CGRect(x: 0, y: toolBar.frame.maxY, width: containerView.bounds.size.width, height: containerView.bounds.size.height - toolBar.frame.maxY)
             datePicker.backgroundColor = picker.pickerBackgroundColor
-            datePicker.date = picker.currentDate
-            datePicker.maximumDate = picker.maximumDate
-            datePicker.minimumDate = picker.minimumDate
-            datePicker.datePickerMode = picker.mode
             containerView.addSubview(datePicker)
         }
         
@@ -125,7 +139,14 @@ internal class ZZDatePickerController: UIViewController {
     }
 
     @objc private func doneAction() {
-        self.picker.pickHandler?(datePicker.date)
+        let date: Date
+        switch picker.mode {
+        case .monthAndYear:
+            date = (datePicker as! ZZDatePickerView).date
+        default:
+            date = (datePicker as! UIDatePicker).date
+        }
+        self.picker.pickHandler?(date)
         self.dissmiss()
     }
 

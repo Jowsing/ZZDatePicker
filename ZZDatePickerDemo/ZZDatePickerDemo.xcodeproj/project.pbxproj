@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82417AE124D3B8CC0062CAF1 /* ZZDatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82417AE024D3B8CC0062CAF1 /* ZZDatePickerView.swift */; };
 		82FB5796243F08F600F6644C /* ZZDatePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FB5795243F08F600F6644C /* ZZDatePickerController.swift */; };
 		E945677C212482A00020DF32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E945677B212482A00020DF32 /* AppDelegate.swift */; };
 		E945677E212482A00020DF32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E945677D212482A00020DF32 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		82417AE024D3B8CC0062CAF1 /* ZZDatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZZDatePickerView.swift; sourceTree = "<group>"; };
 		82FB5795243F08F600F6644C /* ZZDatePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZZDatePickerController.swift; sourceTree = "<group>"; };
 		E9456778212482A00020DF32 /* ZZDatePickerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZZDatePickerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E945677B212482A00020DF32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			children = (
 				E94567AA2124833F0020DF32 /* ZZDatePicker.swift */,
 				82FB5795243F08F600F6644C /* ZZDatePickerController.swift */,
+				82417AE024D3B8CC0062CAF1 /* ZZDatePickerView.swift */,
 			);
 			name = ZZDatePicker;
 			path = ../../ZZDatePicker;
@@ -174,6 +177,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82417AE124D3B8CC0062CAF1 /* ZZDatePickerView.swift in Sources */,
 				E945677E212482A00020DF32 /* ViewController.swift in Sources */,
 				E94567AB2124833F0020DF32 /* ZZDatePicker.swift in Sources */,
 				E945677C212482A00020DF32 /* AppDelegate.swift in Sources */,

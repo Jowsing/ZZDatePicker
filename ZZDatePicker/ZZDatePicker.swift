@@ -9,11 +9,33 @@
 import UIKit
 import Foundation
 
+public extension ZZDatePicker {
+    
+    enum Mode : Int {
+
+        case time = 0
+
+        case date = 1
+
+        case dateAndTime = 2
+
+        case countDownTimer = 3
+        
+        case monthAndYear = 4
+        
+        func mode_UIDatePicker() -> UIDatePicker.Mode {
+            return UIDatePicker.Mode(rawValue: rawValue) ?? .date
+        }
+    }
+}
+
 public struct ZZDatePicker {
     
     // MARK: - Properties (public)
     
-    public var mode: UIDatePicker.Mode = .date
+    public var mode: Mode = .date
+    
+    public var locale: Locale?
     
     public var currentDate = Date()
     
