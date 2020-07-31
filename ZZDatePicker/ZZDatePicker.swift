@@ -29,7 +29,7 @@ public extension ZZDatePicker {
     }
 }
 
-public struct ZZDatePicker {
+public class ZZDatePicker {
     
     // MARK: - Properties (public)
     
