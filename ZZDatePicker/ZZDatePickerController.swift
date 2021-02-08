@@ -30,6 +30,9 @@ internal class ZZDatePickerController: UIViewController {
             return pickerView
         default:
             let pickerView = UIDatePicker()
+            if #available(iOS 13.4, *) {
+                pickerView.preferredDatePickerStyle = .wheels
+            } 
             pickerView.date = picker.currentDate
             pickerView.maximumDate = picker.maximumDate
             pickerView.minimumDate = picker.minimumDate
